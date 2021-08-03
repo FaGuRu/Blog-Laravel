@@ -16,3 +16,25 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/usuarios', function (){
+    return 'Usuarios';
+});
+
+//usuarios/nuevos!= usuarios/
+Route::get('/usuarios/{id}',function($id) {
+    return "Mostrando detalles del usuario: {$id}";
+})->where('id', '[0-9]+'); // Condicion para evitar la confucion de la ruta usuarios/
+
+Route::get('/usuarios/nuevo',function() {
+    return 'Crear nuevo usuario';
+});
+
+//el ? se utiliza para decir que el parametro no es obligatorio
+Route::get('/saludo/{name}/{nickname?}',function($name,$nickname = null) {
+    if($nickname){
+        return "Biemvenido {$name}, tu apodo es {$nickname}";
+    }else{
+        return "Biemvenido {$name}, no cuentas conun apodo";
+    }
+});
