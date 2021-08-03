@@ -32,6 +32,8 @@ Route::get('/usuarios/nuevo',function() {
 
 //el ? se utiliza para decir que el parametro no es obligatorio
 Route::get('/saludo/{name}/{nickname?}',function($name,$nickname = null) {
+    $name = ucfirst($name); //Colocamos la primera letra del nombre en mayuscula
+
     if($nickname){
         return "Biemvenido {$name}, tu apodo es {$nickname}";
     }else{
