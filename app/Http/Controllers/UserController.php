@@ -8,7 +8,17 @@ class UserController extends Controller
 {
     public function index()
     {
-        return 'Usuarios';
+        $users = [
+            'Fabricio',
+            'Christian',
+            'Felipe',
+            'Henning',
+        ];
+
+        return view('users', [
+            'users' => $users,
+            'title' => 'Listado de usuarios'
+        ]); //Arreglo asociativo
     }
 
     public function show($id)
