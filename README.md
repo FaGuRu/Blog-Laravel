@@ -64,3 +64,4 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 Iniciar servidor con el comando: php artisan serve
 Iniciar test con el comando: vendor/bin/phpunit
 Generar un nuevo controlador: php artisan make:controller UserController
+Para utilizar Blade debemos llamar anuestro archivo con la extención .blade.php
