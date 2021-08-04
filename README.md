@@ -60,3 +60,7 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+Iniciar servidor con el comando: php artisan serve
+Iniciar test con el comando: vendor/bin/phpunit
+Generar un nuevo controlador: php artisan make:controller UserController
