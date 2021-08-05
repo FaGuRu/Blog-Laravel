@@ -21,6 +21,6 @@ class WelcomeUsersTest extends TestCase
     {
         $this->get('/saludo/fabricio')
             ->assertStatus(200)
-            ->assertSee('Biemvenido Fabricio, no cuentas conun apodo');
+            ->assertSee('Biemvenido Fabricio, no cuentas con un apodo');
     }
 }

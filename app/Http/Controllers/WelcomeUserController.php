@@ -10,9 +10,9 @@ class WelcomeUserController extends Controller
         $name = ucfirst($name); //Colocamos la primera letra del nombre en mayuscula
 
         if($nickname){
-            return "Biemvenido {$name}, tu apodo es {$nickname}";
+            return view('welcome.apodo',compact('name','nickname'));
         }else{
-            return "Biemvenido {$name}, no cuentas conun apodo";
+            return view('welcome.name',compact('name'));
         }
     }
 }
