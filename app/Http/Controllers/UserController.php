@@ -17,15 +17,14 @@ class UserController extends Controller
         }
 
 
-        return view('users', [
-            'users' => $users,
-            'title' => 'Listado de usuarios'
-        ]); //Arreglo asociativo
+        $title = 'Listado de usuarios';
+
+        return view('users.index', compact('title', 'users'));
     }
 
     public function show($id)
     {
-        return view('user_detail',compact('id'));
+        return view('users.show',compact('id'));
     }
 
     public function create()
